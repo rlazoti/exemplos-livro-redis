@@ -7,8 +7,8 @@ public class RemoverUltimoUsuarioLogado {
 	public static void main(String[] args) {
 
 		Jedis jedis = new Jedis("localhost");
-		String valor = jedis.get("ultimo_usuario_logado");
+		Long resultado = jedis.del("ultimo_usuario_logado");
 
-		System.out.println(valor);
+		System.out.println(resultado);
 	}
 }

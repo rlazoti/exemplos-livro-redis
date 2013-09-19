@@ -7,8 +7,8 @@ public class ObterUltimoUsuarioLogado {
 	public static void main(String[] args) {
 
 		Jedis jedis = new Jedis("localhost");
-		Long resultado = jedis.del("ultimo_usuario_logado");
+		String valor = jedis.get("ultimo_usuario_logado");
 
-		System.out.println(resultado);
+		System.out.println(valor);
 	}
 }
