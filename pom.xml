@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>br.com.casadocodigo.redis</groupId>
-	<artifactId>capitulo2</artifactId>
+	<artifactId>exemplos-livro-redis</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
 
