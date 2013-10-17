@@ -1,12 +1,1 @@
-*.class
-*.classpath
-*.project
-
-# Package Files #
-*.jar
-*.war
-*.ear
-
-# folders #
-target/
-.settings/
+/bin
