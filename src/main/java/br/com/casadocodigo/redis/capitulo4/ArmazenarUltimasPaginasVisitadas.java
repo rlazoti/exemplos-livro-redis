@@ -7,7 +7,7 @@ public class ArmazenarUltimasPaginasVisitadas {
 	public static void main(String[] args) {
 		String chave = "ultimas_paginas_visitadas";
 		String[] paginasVisitadas = {
-			"/",
+			"/inicio",
 			"/contato",
 			"/sobre-mim",
 			"/todos-os-posts",
