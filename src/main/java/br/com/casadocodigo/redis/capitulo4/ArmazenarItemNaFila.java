@@ -1,17 +1,20 @@
-package br.com.casadocodigo.redis.capitulo3;
+package br.com.casadocodigo.redis.capitulo4;
 
 import redis.clients.jedis.Jedis;
 
 public class ArmazenarItemNaFila {
 
 	public void agendarAutorizacaoDeUsuario(String nome, String email) {
-		String chave = "fila-confirmar-usuario";
+		String chave = "fila:confirmar-usuario";
+		String mensagem = String.format(
+				"{\"nome\": \"%s\", \"email\": \"%s\"}", nome, email
+		);
+
 		Jedis jedis = new Jedis("localhost");
-
-		String mensagem = String.format("{\"nome\": \"%s\", \"email\": \"%s\"}", nome, email);
-
 		Long resultado = jedis.rpush(chave, mensagem);
-		System.out.println(String.format("Email Agendado: %d", resultado));
+		System.out.println(
+				String.format("A fila %s contém %d tarefa(s).", chave, resultado)
+		);
 	}
 
 	public static void main(String[] args) {
