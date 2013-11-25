@@ -21,7 +21,7 @@ public class ArmazenarItemNaFila {
 		ArmazenarItemNaFila fila = new ArmazenarItemNaFila();
 		
 		fila.agendarAutorizacaoDeUsuario(
-				"Daenerys Targaryen", "daenerys@rargaryen.com"
+				"Daenerys Targaryen", "daenerys@targaryen.com"
 		);
 
 		fila.agendarAutorizacaoDeUsuario(
