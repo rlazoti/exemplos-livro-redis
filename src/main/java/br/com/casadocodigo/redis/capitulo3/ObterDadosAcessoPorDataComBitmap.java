@@ -39,7 +39,7 @@ public class ObterDadosAcessoPorDataComBitmap {
 		
 		System.out.println(
 				String.format(
-						"Total de usuários únicos no dia %s foi: %d", 
+						"Total de usuários únicos no dia %s: %d", 
 						Arrays.asList(diario), 
 						totalDiario
 				)
@@ -47,7 +47,7 @@ public class ObterDadosAcessoPorDataComBitmap {
 		
 		System.out.println(
 				String.format(
-						"Total de usuários únicos nos dias %s foi: %d", 
+						"Total de usuários únicos nos dias %s: %d", 
 						Arrays.asList(semanal), 
 						totalSemanal
 				)
