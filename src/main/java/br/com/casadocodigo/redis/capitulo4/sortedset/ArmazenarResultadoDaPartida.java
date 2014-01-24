@@ -21,7 +21,7 @@ public class ArmazenarResultadoDaPartida {
 		String perdedor = jogadores.get(1);
 		
 		
-		String chave = "scores";
+		String chave = "scores2";
 		double pontosVencedor = 10;
 		double pontosPerdedor = -5;
 		
@@ -47,10 +47,20 @@ public class ArmazenarResultadoDaPartida {
 	public static void main(String[] args) {
 		ArmazenarResultadoDaPartida partidas = 
 				new ArmazenarResultadoDaPartida();
-		
-		partidas.realizarPartida("Aragorn", "Gandalf");
-		partidas.realizarPartida("Aragorn", "Legolas");
-		partidas.realizarPartida("Gandalf", "Legolas");		
-	}
 
+		for (int rodada=1; rodada<=5; rodada++) {
+			System.out.println(String.format("Rodada %d", rodada));
+			partidas.realizarPartida("AragornBB", "GandalfBB");
+			partidas.realizarPartida("AragornBB", "LegolasBB");
+			partidas.realizarPartida("AragornBB", "FrodoBB");
+			partidas.realizarPartida("GandalfBB", "BilboBB");
+			partidas.realizarPartida("GandalfBB", "GimliBB");
+			partidas.realizarPartida("GandalfBB", "SamBB");
+			partidas.realizarPartida("FrodoBB", "BoromirBB");
+			partidas.realizarPartida("FrodoBB", "GollumBB");
+			partidas.realizarPartida("GollumBB", "BoromirBB");
+			partidas.realizarPartida("SamBB", "GimliBB");
+		}
+
+	}
 }
