@@ -2,6 +2,7 @@ package br.com.casadocodigo.redis.capitulo5.pusub;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPubSub;
@@ -11,8 +12,12 @@ public class Radio {
 	static class Ouvinte {
 		private final String nome;
 		private final String estacao;
+		
+		private AtomicInteger musicasOuvidas =
+			new AtomicInteger(0);
+
 		private static final Executor threadPool = 
-			Executors.newCachedThreadPool();
+			Executors.newFixedThreadPool(3);
 
 		Ouvinte(String nome, String estacao) {
 			this.nome = nome;
@@ -60,6 +65,10 @@ public class Radio {
 									channel
 								)
 							);
+							
+							if (musicasOuvidas.addAndGet(1) >= 3) {
+								this.unsubscribe();
+							}
 						}
 
 						@Override
