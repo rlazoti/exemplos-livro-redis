@@ -101,10 +101,10 @@ public class Radio {
 		Ouvinte rodrigo = new Ouvinte("Rodrigo", "punk-rock");
 		rodrigo.ouvirEstacao();
 
-		Ouvinte rafael = new Ouvinte("Rafael", "punk-rock");
+		Ouvinte rafael = new Ouvinte("Rafael", "surf-music");
 		rafael.ouvirEstacao();
 
-		Ouvinte andressa = new Ouvinte("Andressa", "surf-music");
+		Ouvinte andressa = new Ouvinte("Andressa", "pop-rock");
 		andressa.ouvirEstacao();
 	}
 
