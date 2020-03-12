@@ -4,11 +4,10 @@ import redis.clients.jedis.Jedis;
 
 public class RemoverUltimoUsuarioLogado {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
+        Jedis jedis = new Jedis("localhost");
+        Long resultado = jedis.del("ultimo_usuario_logado");
 
-		Jedis jedis = new Jedis("localhost");
-		Long resultado = jedis.del("ultimo_usuario_logado");
-
-		System.out.println(resultado);
-	}
+        System.out.println(resultado);
+    }
 }
